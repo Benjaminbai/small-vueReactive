@@ -1,0 +1,24 @@
+{
+  "name": "small-vuereactive",
+  "version": "1.0.0",
+  "description": "realize vue reactive logic",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benjaminbai/small-vueReactive.git"
+  },
+  "author": "benjamin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benjaminbai/small-vueReactive/issues"
+  },
+  "homepage": "https://github.com/Benjaminbai/small-vueReactive#readme",
+  "devDependencies": {
+    "webpack": "5",
+    "webpack-cli": "3",
+    "webpack-dev-server": "3"
+  }
+}
