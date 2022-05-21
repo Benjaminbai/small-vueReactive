@@ -1,22 +1,23 @@
-const obj = {}
 
-function defineReactive(obj, key, val) {
-    Object.defineProperty(obj, key, {
-        enumerable: true,
-        configurable: true,
-        get() {
-            console.log('访问')
-            return val
-        },
-        set(newVal) {
-            console.log('赋值')
-            if (val === newVal) return
-            val = newVal
+import observe from "./observe"
+import Watcher from "./Watcher"
+
+const obj = {
+    a: {
+        m: {
+            n: 10
         }
-    })
+    },
+    b: 10,
+    g: [11, 22, 33, 44]
 }
 
-defineReactive(obj, 'a', 10)
-obj.a = 66
-console.log(11111, obj.a)
-console.log(22222, obj)
+
+
+observe(obj)
+new Watcher(obj, 'a.m.n', (val) => {
+    console.log('********', val)
+})
+obj.a.m.n = 99
+
+
